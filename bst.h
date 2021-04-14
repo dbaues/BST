@@ -17,14 +17,6 @@ struct NODE{
         right = nullptr;
         parent = p;
     }
-
-    // Node destructor.
-    ~NODE(){
-        value = 0;
-        left = nullptr;
-        right = nullptr;
-        parent = nullptr;
-    }
 };
 
 NODE* insertNode(NODE*, int);

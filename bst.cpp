@@ -31,19 +31,13 @@ void deleteNode(NODE* node, int value){
         }
         else if(node->right == nullptr){
             NODE* predecessor = node->left;
-            while(true){
-                if(predecessor->right == nullptr){ break; }
-                else{ predecessor = predecessor->right; }
-            }
+            for(predecessor; predecessor->right!=nullptr; predecessor=predecessor->right);
             node->value = predecessor->value;
             deleteNode(predecessor, predecessor->value);
         }
         else{
             NODE* successor = node->right;
-            while(true){
-                if(successor->left == nullptr){ break; }
-                else{ successor = successor->left; }
-            }
+            for(successor; successor->left!=nullptr; successor=successor->left);
             node->value = successor->value;
             deleteNode(successor, successor->value);
         }
