@@ -6,7 +6,7 @@ int main(){
     NODE* root = nullptr;
     int arr[] = {34, 23, 75, 3, 27, 94, 53, 68, 12, 1};
     int len = sizeof(arr)/sizeof(arr[0]);
-    
+
     // Insert into tree.
     for(int i = 0; i < len; ++i)
         root = insertNode(root, arr[i]);
